@@ -9,6 +9,7 @@ import orderRouter from "./routes/orderRoute.js";
 dotenv.config({ path: "./.env" });
 
 const app = express();
+const server = http.createServer(app);
 const PORT = process.env.PORT || 7000;
 
 app.use(express.json());
@@ -23,7 +24,10 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log("Server is running on Port: " + PORT);
   connectDB();
 });
+
+server.keepAliveTimeout = 120000; // 120 seconds
+server.headersTimeout = 120000; 
