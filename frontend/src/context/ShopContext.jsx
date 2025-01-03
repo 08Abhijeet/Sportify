@@ -9,7 +9,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "₹";
   const delivery_fee = 10;
-  const backendUrl = import.meta.env.MODE === "developmment" ? "http://localhost:5000/api" : "/api";;
+  const backendUrl = import.meta.env.MODE === "development" ? "http://localhost:5000/api" : "/api";
   console.log(backendUrl);
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
