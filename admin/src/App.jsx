@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
 export const currency = "$"
-export const backendUrl = import.meta.env.MODE === "developmment" ? "http://localhost:5000" : "/";
+export const backendUrl = import.meta.env.MODE === "developmment" ? "http://localhost:5000" : "/api";
 const App = () => {
   const [token, setToken] = useState(
     localStorage.getItem("token") ? localStorage.getItem("token") : ""
