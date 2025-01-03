@@ -6,6 +6,7 @@ import productRoutes from "./routes/product.route.js";
 import authRoutes from "./routes/auth.route.js";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import http from "http";
 dotenv.config({ path: "./.env" });
 
 const app = express();
