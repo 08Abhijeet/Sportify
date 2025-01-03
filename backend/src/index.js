@@ -23,19 +23,20 @@ app.use("/api/product", productRoutes);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter)
 
+
 if(process.env.NODE_ENV=== "production")
 {
   app.use(express.static(path.join(__dirname, "../frontend/dist")));
   // Serve admin UI
   app.use(express.static(path.join(__dirname, "../admin/dist")));
 
-  pp.get("/frontend/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/dist/index.html"));
+  app.get("/frontend/*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
   });
 
   // Fallback route for admin UI
   app.get("/admin/*", (req, res) => {
-    res.sendFile(path.join(__dirname, "../admin/dist/index.html"));
+    res.sendFile(path.join(__dirname, "../admin", "dist", "index.html"));
   });
 }
 app.listen(PORT, () => {
