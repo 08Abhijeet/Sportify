@@ -9,7 +9,7 @@ export const ShopContext = createContext();
 const ShopContextProvider = (props) => {
   const currency = "₹";
   const delivery_fee = 10;
-  const backendUrl = "https://fabrica-ah0h.onrender.com";
+  const backendUrl = "https://sportify-33c9.onrender.com";
   console.log(backendUrl);
   const [search, setSearch] = useState("");
   const [showSearch, setShowSearch] = useState(false);
