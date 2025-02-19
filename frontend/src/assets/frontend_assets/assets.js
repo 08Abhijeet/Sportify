@@ -60,6 +60,7 @@ import hero from './hero.png'
 import cart_icon from './cart_icon.png'
 import bin_icon from './bin_icon.png'
 import dropdown_icon from './dropdown_icon.png'
+import landing1 from './landing1.png'
 import exchange_icon from './exchange_icon.png'
 import profile_icon from './profile_icon.png'
 import quality_icon from './quality_icon.png'
@@ -77,6 +78,7 @@ import cross_icon from './cross_icon.png'
 export const assets = {
     logo,
     hero,
+    landing1,
     cart_icon,
     dropdown_icon,
     exchange_icon,
@@ -98,7 +100,7 @@ export const assets = {
 export const products = [
     {
         _id: "aaaaa",
-        name: "Women Round Neck Cotton Top",
+        name: "Women Round Neck",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
         price: 100,
         image: [p_img1],

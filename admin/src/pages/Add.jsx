@@ -162,18 +162,7 @@ const Add = ({token}) => {
             <option value="Kids"> Kids</option>
           </select>
         </div>
-        <div>
-          <p className="mb-2">Sub Category</p>
-          <select
-            onChange={(e) => setSubCategory(e.target.value)}
-            value={subCategory}
-            className="w-full px-3 py-2"
-          >
-            <option value="Topwear">Topwear</option>
-            <option value="Bottomwear"> Bottomwear</option>
-            <option value="Winterwear">Winterwear</option>
-          </select>
-        </div>
+       
         <div>
           <p className="mb-2">Product Price</p>
           <input
@@ -240,40 +229,7 @@ const Add = ({token}) => {
               L
             </p>
           </div>
-          <div
-            onClick={() =>
-              setSizes((prev) =>
-                prev.includes("XL")
-                  ? prev.filter((item) => item !== "XL")
-                  : [...prev, "XL"]
-              )
-            }
-          >
-            <p
-              className={`${
-                sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`}
-            >
-              XL
-            </p>
-          </div>
-          <div
-            onClick={() =>
-              setSizes((prev) =>
-                prev.includes("XXL")
-                  ? prev.filter((item) => item !== "XXL")
-                  : [...prev, "XXL"]
-              )
-            }
-          >
-            <p
-              className={`${
-                sizes.includes("XXL") ? "bg-pink-100" : "bg-slate-200"
-              } px-3 py-1 cursor-pointer`}
-            >
-              XXL
-            </p>
-          </div>
+         
         </div>
       </div>
 
